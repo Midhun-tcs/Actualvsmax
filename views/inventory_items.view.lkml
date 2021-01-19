@@ -86,7 +86,7 @@ view: inventory_items {
 
 dimension: total_value {
   type: number
-  sql: ${product_retail_price}*${product_sku} ;;
+  sql: ${product_retail_price}*200 ;;
 }
   measure: count {
     type: count
