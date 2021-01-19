@@ -70,9 +70,9 @@ view: inventory_items {
     sql: ${TABLE}."PRODUCT_SKU" ;;
   }
 
-  dimension: total_value {
-    type: number
-    sql: ${product_retail_price}*200 ;;
+  dimension: total_value1 {
+    type: string
+    sql: ${product_brand} || ' ' || ${product_sku}  ;;
   }
 
   dimension_group: sold {
