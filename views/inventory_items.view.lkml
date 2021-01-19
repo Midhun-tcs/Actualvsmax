@@ -70,6 +70,11 @@ view: inventory_items {
     sql: ${TABLE}."PRODUCT_SKU" ;;
   }
 
+  dimension: total_value {
+    type: number
+    sql: ${product_retail_price}*200 ;;
+  }
+
   dimension_group: sold {
     type: time
     timeframes: [
@@ -84,10 +89,7 @@ view: inventory_items {
     sql: ${TABLE}."SOLD_AT" ;;
   }
 
-dimension: total_value {
-  type: number
-  sql: ${product_retail_price}*200 ;;
-}
+
   measure: count {
     type: count
     drill_fields: [id, product_name, order_items.count]
