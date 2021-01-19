@@ -84,7 +84,7 @@ view: inventory_items {
     sql: ${TABLE}."SOLD_AT" ;;
   }
 
-measure: total_value {
+dimension: total_value {
   type: number
   sql: ${product_retail_price}*${product_sku} ;;
 }
